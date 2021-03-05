@@ -1,12 +1,11 @@
 package redis
 
 import (
-	"github.com/miaogaolin/gotool/config"
 	"testing"
 )
 
 func connect() (*RedisDB, error) {
-	return Connect(&config.Redis{
+	return Connect(&Config{
 		Host:    "127.0.0.1",
 		Port:    6379,
 		Db:      0,
