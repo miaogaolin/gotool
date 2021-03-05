@@ -1,4 +1,4 @@
-package config
+package redis
 
 type Redis struct {
 	Host     string
