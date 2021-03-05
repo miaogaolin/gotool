@@ -3,8 +3,8 @@ package redis
 import (
 	"encoding/json"
 	"fmt"
-	"gotool/config"
-	"gotool/logx"
+	"github.com/miaogaolin/gotool/config"
+	"github.com/miaogaolin/gotool/logx"
 	"time"
 
 

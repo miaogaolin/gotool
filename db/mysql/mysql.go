@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"gotool/config"
+	"github.com/miaogaolin/gotool/config"
 )
 
 var engine *Engine

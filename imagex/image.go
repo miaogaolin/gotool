@@ -3,14 +3,14 @@ package imagex
 import (
 	"bytes"
 	"errors"
+	"github.com/miaogaolin/gotool/rest"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
-	"syt-crawler/core/filex"
-	"syt-crawler/rest"
+	"github.com/miaogaolin/gotool/filex"
 
 	"github.com/disintegration/imaging"
 )
@@ -216,7 +216,6 @@ func Download(imgUrl string) (*os.File, error) {
 	imgUrl = strings.Replace(imgUrl, "_.webp", "", 1)
 	imgUrl = strings.Replace(imgUrl, "_webp", "", 1)
 	ext := filepath.Ext(imgUrl)
-
 	resp, err := rest.Client.Get(rest.Request{
 		Url: imgUrl,
 	})

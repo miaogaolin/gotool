@@ -1,7 +1,7 @@
 package redis
 
 import (
-	"syt-crawler/config"
+	"github.com/miaogaolin/gotool/config"
 	"testing"
 )
 

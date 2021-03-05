@@ -2,8 +2,8 @@ package filex
 
 import (
 	"fmt"
+	"github.com/miaogaolin/gotool/randx"
 	"os"
-	"syt-crawler/core/randx"
 	"time"
 )
 

@@ -3,7 +3,7 @@ package limit
 import (
 	"errors"
 	"strconv"
-	"syt-crawler/core/db/redis"
+	"github.com/miaogaolin/gotool/db/redis"
 
 	"time"
 )
