@@ -44,6 +44,8 @@ func Error(c *gin.Context, httpCode int, req interface{}, err interface{}) {
 		c.JSON(httpCode, Err{Error: e.Error()})
 	case errorx.Error:
 		c.JSON(httpCode, Err{Error: e.ApiMessage})
+	case string:
+		c.JSON(httpCode, Err{Error: e})
 	}
 
 	c.Abort()
