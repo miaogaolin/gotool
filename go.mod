@@ -1,4 +1,4 @@
-module gotool
+module github.com/miaogaolin/gotool
 
 go 1.15
 
