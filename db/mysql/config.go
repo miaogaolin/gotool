@@ -1,6 +1,6 @@
 package mysql
 
-type Mysql struct {
+type Config struct {
 	Host string
 	Port string
 	User string
