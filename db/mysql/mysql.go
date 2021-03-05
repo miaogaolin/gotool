@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"github.com/miaogaolin/gotool/config"
 )
 
 var engine *Engine
@@ -13,7 +12,7 @@ type Engine struct {
 	*gorm.DB
 }
 
-func Connect(conf *config.Mysql) (err error) {
+func Connect(conf *Config) (err error) {
 	if engine != nil {
 		return
 	}

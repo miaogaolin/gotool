@@ -3,7 +3,6 @@ package redis
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/miaogaolin/gotool/config"
 	"github.com/miaogaolin/gotool/logx"
 	"time"
 
@@ -31,10 +30,10 @@ var DB *RedisDB
 
 type RedisDB struct {
 	client *redis.Client
-	config *config.Redis
+	config *Config
 }
 
-func Connect(config *config.Redis) (*RedisDB, error) {
+func Connect(config *Config) (*RedisDB, error) {
 	if config.Enabled == 0 {
 		DB = &RedisDB{config: config}
 		return DB, nil
