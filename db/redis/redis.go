@@ -3,10 +3,9 @@ package redis
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/miaogaolin/gotool/logx"
 	"time"
 
-
+	"github.com/miaogaolin/gotool/logx"
 
 	"github.com/go-redis/redis"
 )
@@ -31,6 +30,7 @@ var DB *RedisDB
 type RedisDB struct {
 	client *redis.Client
 	config *Config
+	prefix string
 }
 
 func Connect(config *Config) (*RedisDB, error) {
@@ -54,8 +54,13 @@ func Connect(config *Config) (*RedisDB, error) {
 		MinIdleConns: minIdleConns,
 	})
 	_, err := client.Ping().Result()
-	DB = &RedisDB{client: client, config: config}
+	DB = &RedisDB{client: client, config: config, prefix: prefix}
 	return DB, err
+}
+
+func (r *RedisDB) SetPrefix(prefix string) *RedisDB {
+	r.prefix = prefix
+	return r
 }
 
 // 获取
